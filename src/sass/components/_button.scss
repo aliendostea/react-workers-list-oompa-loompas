@@ -1,0 +1,39 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        font-family: $font-primary;
+        font-size: 1.8rem;
+        font-weight: 600; 
+        letter-spacing: .53px;
+        color: $color-primary;
+        text-decoration: none;
+        white-space: nowrap;
+        -webkit-touch-callout: none; 
+        -webkit-user-select: none;       
+        -moz-user-select: none; 
+        -ms-user-select: none; 
+        user-select: none;
+        padding: 2rem 3rem;
+        border-radius: 1rem;
+        border: none;
+        background-color: gray;
+        outline: none;
+        cursor: pointer;
+        transition: all .5s; 
+        z-index: 999;     
+
+        &:focus {
+            outline: none;        
+        }
+        &:hover{
+            transform: translateY(-3px);
+        }
+        &:active{
+            transform: translateY(1px);        
+        }
+    }
+}
+
+

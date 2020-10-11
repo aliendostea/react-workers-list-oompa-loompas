@@ -1,0 +1,146 @@
+////// content - body
+.content {
+    width: 100%;
+    // height: 100vh;
+    display: grid;
+    @include grid-template-columns-all-full-start-end;       
+    grid-template-rows: 7rem 1fr;
+}
+
+.home {
+    grid-column: full-start / full-end;
+    grid-row: 2 / 3;
+    display: grid;
+    @include grid-template-columns-all-full-start-end; 
+    grid-template-rows: repeat(2, min-content) 1fr;
+    grid-row-gap: 4rem;
+    padding-bottom: 19rem;
+
+    &__search-box {
+        grid-column: 9 / 11;
+        grid-row: 2 / 3;
+        height: 4rem;
+        @include respond(tab-port){
+            grid-column: 4 / center-end;
+        }
+    }
+    &__heading {
+        grid-column: center-start / center-end;
+        grid-row: 3 / 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        & .heading-big {
+            margin-bottom: 1rem;
+        }
+    }
+    &__list-items {
+        grid-column: 3 / 11;
+        grid-row: 4 / 5;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(23rem, 1fr));
+        grid-template-rows: repeat(2, min-content);
+        justify-content: space-between;
+        grid-gap: 5rem 3rem;
+        margin-top: 4rem;
+
+        @include respond(tab-between-port-land){
+            grid-template-columns: repeat(3, minmax(20rem, 1fr));
+        }
+
+        @include respond(tab-port){
+            grid-column: center-start / center-end;
+            // grid-template-columns: repeat(2, minmax(20rem, 1fr));
+            grid-template-columns: repeat(2, minmax(20rem, 38rem));
+        }
+        @include respond(mini-phone){
+            grid-template-columns: repeat(1, minmax(20rem, 1fr));
+        }
+    }
+    &__list-loading {
+        color: $color-secondary;
+        grid-column: 1 / 4;
+        justify-self: center;
+    }
+
+}
+
+.detail {
+    grid-column: full-start / full-end;
+    grid-row: 2 / 3;
+    display: grid;
+    @include grid-template-columns-all-full-start-end; 
+    grid-template-rows: minmax(30rem, 35rem) 1fr;
+    padding: 10rem 0 5rem 0;
+
+    @include respond(phone){
+        grid-row-gap: 2rem;
+    }
+
+    &__box-img {
+        grid-column: 3 / 8;
+        grid-row: 1 / 2;
+        overflow: hidden;
+        border-radius: 3px;
+
+        @include respond(tab-port){
+            grid-column: center-start / 4;
+        }
+        @include respond(phone){
+            grid-column: center-start / center-end;
+            grid-row: 1 / 2;
+        }
+        
+        & img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__data {
+        grid-column: 8 / 11;
+        grid-row: 1 / 3;
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding-left: 3rem;
+        @include respond(tab-port){
+            grid-column: 4 / center-end;
+        }
+        @include respond(phone){
+            grid-column: center-start / center-end;
+            grid-row: 2 / 3;
+        }
+
+        &-titles {
+            display: grid;
+            grid-row-gap: .2rem;
+        }
+        &-name {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: $color-primary;
+        }
+        &-gender {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+        &-profession {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+    }
+    &__description {
+        display: inline-block;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: 20px;
+        color: $color-primary;
+        margin-top: 3rem;
+        @include respond(big-desktop){
+            line-height: 26px;
+        }
+    }
+}
+

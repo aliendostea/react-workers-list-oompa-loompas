@@ -1,0 +1,37 @@
+.card {
+    display: grid;
+    grid-row-gap: .3rem;
+
+    &:hover &__image img { transform: scale(1.1);}
+    &:hover &__image { border: 2px solid $color-secondary;}
+    &:hover &__name { color: $color-secondary;}
+
+    &__image {
+         height: 19rem; /// revisar en grandes pantallas
+         overflow: hidden;
+         border: 2px solid rgba(155, 155, 155, 0);
+         border-radius: 3px;
+         margin-bottom: 1.7rem;
+         transition: $transition-1;
+
+        & img {
+            height: 100%;
+            object-fit: cover;
+            transition: $transition-2;
+        }
+    }
+    &__name {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $color-primary;
+        transition: $transition-1;
+    }
+    &__gender {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    &__profession {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+}

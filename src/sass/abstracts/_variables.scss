@@ -1,0 +1,41 @@
+// COLORS
+$color-primary: #1b1b1b;
+$color-secondary: #308abe;
+ 
+$color-gray-light-1: #f7f7f7;
+$color-gray-dark-1: #464646;
+
+$color-gray-dark-overlay: rgba(0, 0, 0, 0.7);
+
+
+:root {
+    // COLORS
+    --color-primary: #1b1b1b;
+    --color-secondary: #61cdff;
+ 
+    --color-gray-light-1: #f7f7f7;
+    --color-gray-dark-1: #464646;
+
+    --color-gray-dark-overlay: rgba(0, 0, 0, 0.7);
+}
+
+
+// FONT
+$default-font-size: 1.6rem;
+
+$font-primary: 'Montserrat', sans-serif;
+
+// BTN border radius
+$btn-border-radius: 5rem;
+$btn-borderline: 2px solid $color-primary;
+$btn-borderline-hover: 2px solid $color-secondary;
+
+// transition animation
+$transition-1: all .3s;
+$transition-2: all 0.8s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+// z-index
+$bg-noise: 1;
+$z-index-normal: 5;
+$z-index-medium: 50;
+$z-index-high: 500;
