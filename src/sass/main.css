@@ -811,6 +811,10 @@ img {
   -ms-grid-columns: [full-start] minmax(6rem, 1fr) [center-start] ([col-start] minmax(9rem, 13rem) [col-end])[10] [center-end] minmax(6rem, 1fr) [full-end];
       grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(9rem, 13rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   background-color: #3a6d97;
+  -ms-grid-rows: 7rem;
+      grid-template-rows: 7rem;
+  position: fixed;
+  z-index: 999;
 }
 
 @media only screen and (max-width: 80em) {

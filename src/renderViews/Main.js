@@ -25,6 +25,7 @@ const Main = ({ workers, setLoading, loading, setPageNumber, pageNumber }) => {
   /// handle input fields change
   const handleChange = e => {
 
+    /// esta function impide que llame a la API mientras se busca en el buscador
     setLoadingBottom(false);
     
     /// set searching to true

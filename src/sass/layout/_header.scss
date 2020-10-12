@@ -5,6 +5,9 @@
     display: grid;
     @include grid-template-columns-all-full-start-end;     
     background-color: rgb(58, 109, 151);
+    grid-template-rows: 7rem;
+    position: fixed;
+    z-index: 999;
     
     &__logo-box {
         grid-column: 3 / 7;
