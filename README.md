@@ -1,14 +1,16 @@
-# List of workers Oompa Loompa's - React & Sass ⚡️
+# Workers list Oompa Loompa's - React & Sass ⚡️
 
-In this site you can find all the workers Oompa Loompa's crew of Willy Wonka's chocolate factory. Created with CSS Grid, Sass and ReactJS. Have Fun!\
+In this site you can find all the workers Oompa Loompa's crew of Willy Wonka's chocolate factory. Created with ReactJS, CSS Grid and Sass. Have Fun!\
 
 ## Features
 
 ⚡️ ReactJS\
 ⚡️ React router DOM\
+⚡️ SPA in React\
 ⚡️ React Hooks\
 ⚡️ Fech API\
-⚡️ Fully Responsive\
+⚡️ Input search of all workers in real time\
+⚡️ Fully Responsive & animations with CSS3\
 
 ---
 
@@ -26,6 +28,8 @@ $ npm install
 $ npm start
 
 ```
+This open http://localhost:3000 to view it in the browser.
+Enjoy!
 
 ## Technologies used 🛠️
 
@@ -39,7 +43,7 @@ $ npm start
 
 ## When I developed this project 
 
-I developed this project on October 2020. 
+I developed this project in October 2020. 
 
 ## Author of the site
 

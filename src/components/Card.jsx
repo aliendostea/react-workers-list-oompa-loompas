@@ -5,7 +5,6 @@ import parse from 'html-react-parser';
 /// sass
 import '../sass/main.css';
 
-// const parse = require('html-react-parser');
 
 const Card = ({dataWorker, arrayWorkers, index, setLoading, loading, setPageNumber, pageNumber, searching, loadingBottom,setLoadingBottom}) => {
     // extrae los props de dataWorker con destructuring
@@ -17,7 +16,6 @@ const Card = ({dataWorker, arrayWorkers, index, setLoading, loading, setPageNumb
       profession,
       image,
     } = dataWorker;
-
 
     /// use ref para el elemento observer. El Ref se le añade al ultimo nodo del API workers
     const observer = useRef();
@@ -33,35 +31,36 @@ const Card = ({dataWorker, arrayWorkers, index, setLoading, loading, setPageNumb
       
       /// si el node current observado fue observado, se desconecta el oberser
       observer.current = new IntersectionObserver(entries =>{
-        if (entries[0].isIntersecting) {
-          console.log('visible');
-          console.log('pageNumber', pageNumber);
-          if (searching) return;
+        
+            if (entries[0].isIntersecting) {
+              
+              if (searching) return;
 
-          /// añade el spinner       
-          setLoadingBottom(true);
+              /// añade el spinner       
+              setLoadingBottom(true);
 
-          /// añade un setTimeout de 2 segundos para una mejor UX al cargar
-          setTimeout(function(){
+              /// añade un setTimeout de 2 segundos para una mejor UX al cargar
+              setTimeout(function(){
+                
+                //// se suma +1 al pagenumber de la ruta de la API para que cargue otra 
+                setPageNumber(prevPageNumber => prevPageNumber + 1);
 
-            //// se suma +1 al pagenumber de la ruta de la API para que cargue otra 
-            setPageNumber(prevPageNumber => prevPageNumber + 1);
+                /// remueve el spinner 
+                setLoadingBottom(false);
+              }, 5000);
 
-            setLoading(true);
+              return;
+            }
 
-            /// remueve el spinner 
-            setLoadingBottom(false);
-          }, 2000);
-
-          return;
-        }
-
-      });
+         });
 
       if (node) observer.current.observe(node);
 
     }, [pageNumber, loading, searching, loadingBottom]);
 
+    const classSlidetop =  pageNumber === 1 ? "slide-top" : "";
+
+    //// parse para el if. jsx para el if del useRef
     let workerNodeElement;
     let htmlInsideLink =
       parse(`<figure class="card__image">
@@ -74,15 +73,15 @@ const Card = ({dataWorker, arrayWorkers, index, setLoading, loading, setPageNumb
             <p class="card__profession">${profession}</p>`
            );
 
-
+    //// si es el ultimo nodo de la lista le añade una function callback para crear el observer que llama al API
     if(arrayWorkers.length === index + 1) {
         workerNodeElement = 
-        <Link to={`/detail/${id}`}  ref={lastNodeWorkerRef} className="card slide-top" id={id}>
+        <Link to={`/detail/${id}`}  ref={lastNodeWorkerRef} className={`card ${classSlidetop}`} id={id}>
            {htmlInsideLink}
        </Link>;
     } else {
         workerNodeElement = 
-        <Link to={`/detail/${id}`} className="card slide-top" id={id}>
+        <Link to={`/detail/${id}`} className={`card ${classSlidetop}`} id={id}>
             {htmlInsideLink}          
        </Link>;
     }

@@ -84,7 +84,6 @@ const Main = ({ workers, setLoading, loading, setPageNumber, pageNumber }) => {
           {loadingBottom && <LoaderSpinner />}
         </div>
       </section>
-      <div className="test__responsive">test__responsive</div>
     </React.Fragment>
   );
 }

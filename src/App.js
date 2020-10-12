@@ -54,7 +54,7 @@ function App() {
     }
 
 
-    setPageNumber(pageNumber);
+    // setPageNumber(pageNumber);
     resultAPI(pageNumber);
   }, [pageNumber]);
 
@@ -62,20 +62,20 @@ function App() {
   //// data structure for localstorage
   /*
   pages = [{
-    "numeroPagina": 1,
-    "timestamp": "1233124234",
-    "workers": ["worker1", "worker2", "worker3"]
-  },
-  {
-    "numeroPagina": 2,
-    "timestamp": "1233124234",
-    "workers": ["worker1", "worker2", "worker3"]
-  }]
+      "numeroPagina": 1,
+      "timestamp": "1233124234",
+      "workers": ["worker1", "worker2", "worker3"]
+    },
+    {
+      "numeroPagina": 2,
+      "timestamp": "1233124234",
+      "workers": ["worker1", "worker2", "worker3"]
+    }]
 
-  workers = [{
-    "numeroPagina": 1,
-    "timestamp": "1233124234",
-    "worker": {"worker1"}
+    workers = [{
+      "numeroPagina": 1,
+      "timestamp": "1233124234",
+      "worker": {"worker1"}
   }]
   */
 
@@ -102,7 +102,6 @@ function App() {
           render={(routeProps) => <UserDetail workers={workerData} {...routeProps} />}
         />
       </main>
-      <div className="test__responsive">test__responsive</div>
     </BrowserRouter>
   );
 }
