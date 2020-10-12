@@ -10,13 +10,13 @@ In this site you can find all the workers Oompa Loompa's crew of Willy Wonka's c
 ⚡️ React Hooks\
 ⚡️ Fech API\
 ⚡️ Input search of all workers in real time\
-⚡️ Fully Responsive & animations with CSS3\
+⚡️ Fully Responsive & animations with Sass & CSS3\
 
 ---
 
 ## How To Use 🔧
 
-Using NPM:
+In the project directory, you can run in the terminal:
 ```bash
 # Install dependencies
 $ npm install
@@ -28,7 +28,7 @@ $ npm install
 $ npm start
 
 ```
-This open http://localhost:3000 to view it in the browser.
+This open http://localhost:3000 to view it in the browser\
 Enjoy!
 
 ## Technologies used 🛠️

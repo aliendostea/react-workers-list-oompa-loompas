@@ -42,8 +42,6 @@ function App() {
           }  
         ); 
 
-        console.log(resJSON);   
-  
         return function cancel() {
             abortController.abort()
         }

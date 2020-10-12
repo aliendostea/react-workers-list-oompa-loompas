@@ -43,19 +43,6 @@ const UserDetail = ({ match }) => {
           return (<React.Fragment></React.Fragment>);
     }
 
-    // const worker = workers.filter(worker => worker.id == workerId  ).pop();
-    // const ZZ =  Array.from(workerDetail);
-    // console.log(workerDetail.length !== 0);
-
-
-
-    /*
-    const mapWorkerDetail = Object.values(workerDetail).map(function(detail, index) {
-            // console.log('---1',detail)
-           return detail === undefined ?  null : detail;
-    });
-    */
-    
     return (
         <React.Fragment>    
                 <section className="detail slide-top">

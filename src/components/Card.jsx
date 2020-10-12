@@ -24,7 +24,6 @@ const Card = ({dataWorker, arrayWorkers, index, setLoading, loading, setPageNumb
     const lastNodeWorkerRef = useCallback( node => {
       /// si esta cargargo los componenten nuevos devuelve return
       if (loading) return;
-      console.log(loading);
 
       /// si el node current observado fue observado, se desconecta el oberser
       if (observer.current) observer.current.disconnect();
